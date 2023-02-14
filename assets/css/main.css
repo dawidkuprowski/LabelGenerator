@@ -101,7 +101,7 @@ input[type="submit"]:active, input[type="button"]:active {
 
 .scroll {
     max-height: calc(100% - 64px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .label_preview {
