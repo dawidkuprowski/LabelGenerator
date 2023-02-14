@@ -4,7 +4,7 @@ function onlyNumberKey(evt) {
         return false;
     return true;
 }
-
+//
 const qrSize = 300;
 
 class Label {
