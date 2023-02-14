@@ -7,6 +7,7 @@
 
 body {
     background-color: #ebebeb;
+    overflow: hidden;
 }
 
 input[type="text"] {
@@ -58,13 +59,10 @@ input[type="submit"]:active, input[type="button"]:active {
     gap: 8px;
     width: 400px;
 
-    position: absolute;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%, 50%);
+    height: 100vh;
 
     background-color: #fff;
-    padding: 64px;
+    padding: 32px;
     border-radius: 4px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
@@ -83,9 +81,16 @@ input[type="submit"]:active, input[type="button"]:active {
 
 .labels_preview {
     position: absolute;
-    top: 32px;
-    right: 32px;
+    right: 0;
+    top: 0;
     width: 400px;
+    height: 100vh;
+
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 #labels_preview {
@@ -95,8 +100,8 @@ input[type="submit"]:active, input[type="button"]:active {
 }
 
 .scroll {
+    max-height: calc(100% - 64px);
     overflow-y: scroll;
-    max-height: 75vh;
 }
 
 .label_preview {
