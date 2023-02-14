@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Label Generator</title>
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/js/qrcode.js"></script>
+    </head>
+    <body>
+        <form class="menu" onsubmit="addLabel(); return false;" action="">
+            <h3>Label Generator</h3>
+            <span>Anc</span>
+            <input type="text" id="input_anc" maxlength="9" onkeyup="this.value = this.value.toUpperCase();" placeholder="np. 190203950" required>
+            <span>Bin</span>
+            <input type="text" id="input_bin" maxlength="8" onkeypress="return onlyNumberKey(event)" placeholder="np. 01011000" required>
+            <span>Quantity</span>
+            <input type="text" id="input_quant" onkeypress="return onlyNumberKey(event)" placeholder="np. 100" required>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox_date" checked>
+                <label for="checkbox_date">Print the date and time.</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox_clear" checked>
+                <label for="checkbox_clear">Clear fields after creating a label.</label>
+            </div>
+            </br>
+            <input type="submit" class="bg-blue" value="Create label">
+            <input type="button" onclick="print();" class="bg-green" value="Print">
+        </form>
+        <div class="labels_preview">
+            <div class="label_preview bg-blue">
+                <span class="title">List of Labels</span>
+            </div>
+            </br>
+            <div id="labels_preview" class="scroll">
+                
+            </div>
+        </div>
+        <div id="labels" hidden>
+
+        </div>
+        <script type="text/javascript" src="./assets/js/main.js"></script>
+    </body>
+</html>
