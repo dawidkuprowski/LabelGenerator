@@ -15,7 +15,7 @@ class Label {
 
         this.id = new Date().getTime();
         this.date = new Date();
-        this.formatedDateAndTime = `${this.date.toLocaleDateString()} | ${this.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+        this.formatedDateAndTime = `${this.date.toLocaleDateString()}, ${this.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
 
         this.init();
     }
